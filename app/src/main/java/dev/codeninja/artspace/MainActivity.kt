@@ -37,17 +37,17 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ArtSpaceScreen(modifier: Modifier = Modifier) {
-	val firstArtwork = R.drawable.denji_face
-	val secondArtwork = R.drawable.zero_two_face
-	val thirdArtwork = R.drawable.sanji_face
-	val fourthArtwork = R.drawable.naruto_face
+	val firstArtwork = R.drawable.manchester
+	val secondArtwork = R.drawable.psg
+	val thirdArtwork = R.drawable.dex
+	val fourthArtwork = R.drawable.wozza
 
 	var title by remember {
-		mutableStateOf(R.string.denji)
+		mutableStateOf(R.string.Manchester)
 	}
 
 	var year by remember {
-		mutableStateOf(R.string.denji_year)
+		mutableStateOf(R.string.manchester_words)
 	}
 
 	var currentArtwork by remember {
@@ -83,18 +83,18 @@ fun ArtSpaceScreen(modifier: Modifier = Modifier) {
 						}
 						secondArtwork -> {
 							currentArtwork = firstArtwork
-							title = R.string.denji
-							year = R.string.denji_year
+							title = R.string.Manchester
+							year = R.string.manchester_words
 						}
 						thirdArtwork -> {
 							currentArtwork = secondArtwork
-							title = R.string.zero_two
-							year = R.string.zero_two_year
+							title = R.string.PSG
+							year = R.string.psg_words
 						}
 						else -> {
 							currentArtwork = thirdArtwork
-							title = R.string.sanji
-							year = R.string.sanji_year
+							title = R.string.real
+							year = R.string.real_words
 						}
 					}
 				},
@@ -111,7 +111,7 @@ fun ArtSpaceScreen(modifier: Modifier = Modifier) {
 					text = "Previous",
 					fontSize = 16.sp,
 					fontWeight = FontWeight.Medium,
-					color = colorResource(id = R.color.blue_300)
+					color = colorResource(id = R.color.red_300)
 				)
 			}
 
@@ -121,13 +121,13 @@ fun ArtSpaceScreen(modifier: Modifier = Modifier) {
 					when (currentArtwork) {
 						firstArtwork -> {
 							currentArtwork = secondArtwork
-							title = R.string.zero_two
-							year = R.string.zero_two_year
+							title = R.string.PSG
+							year = R.string.psg_words
 						}
 						secondArtwork -> {
 							currentArtwork = thirdArtwork
-							title = R.string.sanji
-							year = R.string.sanji_year
+							title = R.string.real
+							year = R.string.real_words
 						}
 						thirdArtwork -> {
 							currentArtwork = fourthArtwork
@@ -136,13 +136,13 @@ fun ArtSpaceScreen(modifier: Modifier = Modifier) {
 						}
 						else -> {
 							currentArtwork = firstArtwork
-							title = R.string.denji
-							year = R.string.denji_year
+							title = R.string.Manchester
+							year = R.string.manchester_words
 						}
 					}
 				},
 				colors = ButtonDefaults.buttonColors(
-					backgroundColor = colorResource(id = R.color.blue_300)
+					backgroundColor = colorResource(id = R.color.red_300)
 				),
 				elevation = ButtonDefaults.elevation(
 					defaultElevation = 1.dp,
@@ -168,7 +168,7 @@ fun ArtworkDisplay(
 ) {
 	Image(
 		painter = painterResource(currentArtwork),
-		contentDescription = stringResource(id = R.string.zero_two),
+		contentDescription = stringResource(id = R.string.manchester_words),
 		modifier = modifier.fillMaxWidth(),
 		contentScale = ContentScale.FillWidth
 	)

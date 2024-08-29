@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name" translatable="false">Art Space</string>
-    <string name="denji">Denji</string>
-    <string name="denji_year">2023</string>
-    <string name="zero_two">Zero Two</string>
-    <string name="zero_two_year">2021</string>
-    <string name="sanji">Sanji</string>
-    <string name="sanji_year">2022</string>
-    <string name="naruto">Naruto</string>
-    <string name="naruto_year">2020</string>
+    <string name="Manchester">Manchester</string>
+    <string name="manchester_words">Best Team In England</string>
+    <string name="PSG">PSG</string>
+    <string name="psg_words">Best Team In France</string>
+    <string name="real">Real Madrid</string>
+    <string name="real_words">Best Team In Spain</string>
+    <string name="naruto">Juventus</string>
+    <string name="naruto_year">Best Team In Italy</string>
 </resources>
